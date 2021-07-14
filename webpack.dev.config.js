@@ -5,16 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const { HotModuleReplacementPlugin } = require('webpack');
 
-const orgName = "edx";
-
 const config = createConfig('webpack-dev');
 config.plugins = [
   new HtmlWebpackPlugin({
-    inject: false,
+    inject: true, // TODO: set this to false to let single-spa manage it.
     template: path.resolve(process.cwd(), 'src/index.ejs'),
     templateParameters: {
-      orgName,
       FAVICON_URL: process.env.FAVICON_URL || null,
+      SITE_NAME: process.env.SITE_NAME,
     },
   }),
   new Dotenv({
