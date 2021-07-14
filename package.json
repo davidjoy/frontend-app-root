@@ -50,7 +50,9 @@
     "react-redux": "7.2.4",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
-    "redux": "4.1.0"
+    "redux": "4.1.0",
+    "single-spa": "^5.9.3",
+    "single-spa-layout": "^1.6.0"
   },
   "devDependencies": {
     "@edx/frontend-build": "5.6.14",
